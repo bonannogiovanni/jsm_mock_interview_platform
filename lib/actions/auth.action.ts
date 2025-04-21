@@ -45,9 +45,11 @@ export async function signUp(params: SignUpParams) {
 }
 
 export async function signIn(params: SignInParams) {
+    console.log('dentro signin')
     const {email, idToken} = params;
 
     try {
+        console.log('dentro signin')
         const userRecord = await auth.getUserByEmail(email);
 
         if (!userRecord) {
